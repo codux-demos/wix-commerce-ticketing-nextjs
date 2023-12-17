@@ -1,6 +1,7 @@
 import { products } from '@wix/stores';
 import testIds from '@app/utils/test-ids';
 import { WixMediaImage } from '@app/components/Image/WixMediaImage';
+import Link from 'next/link';
 
 export function Shop({ items }: { items: products.Product[] }) {
   return (
@@ -28,8 +29,9 @@ export function Shop({ items }: { items: products.Product[] }) {
                 className="relative"
                 data-testid={testIds.PRODUCT_ITEM.CONTAINER}
               >
-                <a
+                <Link
                   href={`/product-page/${item.slug}`}
+                  prefetch={false}
                   data-testid={testIds.PRODUCT_ITEM.PRODUCT_DETAILS_CTA}
                 >
                   <div className="h-auto max-w-full">
@@ -65,7 +67,7 @@ export function Shop({ items }: { items: products.Product[] }) {
                       {item.price!.formatted!.price}
                     </span>
                   </div>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
