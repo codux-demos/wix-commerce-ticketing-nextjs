@@ -4,8 +4,14 @@
   "boardGlobalSetup": "./_codux/board-setup.ts",
   "previewConfiguration": {
     "environmentVariables": {
-      "NEXT_PUBLIC_WIX_CLIENT_ID": "84452635-47cb-45b8-be5b-ca3938e93193",
-      "IS_TEST": "true"
+      "NEXT_PUBLIC_WIX_CLIENT_ID": "mock-id"
+    }
+  },
+  "resolve": {
+    "alias":{
+      "@app": "./app",
+      "@app/*": "./app/*",
+      "next/image": "./_codux/wrappers/FakeImage"
     }
   }
 }

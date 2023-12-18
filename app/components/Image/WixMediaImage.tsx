@@ -1,6 +1,5 @@
 import { media as wixMedia } from '@wix/sdk';
 import Image, { ImageProps } from 'next/image';
-import FakeImage from '_codux/wrappers/FakeImage';
 import { PLACEHOLDER_IMAGE } from '@app/constants';
 
 function getImageUrlForMedia(media: string, width: number, height: number) {
@@ -27,13 +26,11 @@ export function WixMediaImage({
   objectFit?: 'cover' | 'contain';
 }) {
   const imageUrl =
-    process.env.IS_TEST && media
+    media && media.startsWith('http')
       ? media
       : media
       ? getImageUrlForMedia(media || '', width, height)
       : PLACEHOLDER_IMAGE;
-
-  const ImageComp = process.env.IS_TEST ? FakeImage : Image;
 
   const styleProps: Partial<ImageProps> = {
     ...(objectFit
@@ -44,7 +41,7 @@ export function WixMediaImage({
   return (
     <div className={`flex items-center justify-center h-full`}>
       <div className="overflow-hidden relative group w-full h-full">
-        <ImageComp
+        <Image
           {...styleProps}
           src={imageUrl}
           quality={90}

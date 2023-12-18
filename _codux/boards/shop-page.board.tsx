@@ -1,20 +1,21 @@
 import React from 'react';
 import { createBoard } from '@wixc3/react-board';
-import { ClientProvider } from '@app/components/Provider/ClientProvider';
 import { Shop } from '@app/components/Shop/Shop';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 import { createProducts } from '../wrappers/fake-data';
+import { SiteWrapper } from '@app/site-wrapper';
+import { FakeClientProvider } from '@app/components/Provider/FakeClientProvider';
 
 export default createBoard({
-  name: 'Comp',
+  name: 'Shop Page',
   Board: () => (
     <MemoryRouterProvider
       onRouteChangeComplete={(url) => alert(`navigate to ${url}`)}
     >
-      <ClientProvider>
+      <SiteWrapper ClientProvider={FakeClientProvider}>
         <Shop items={createProducts()} />
-      </ClientProvider>
+      </SiteWrapper>
     </MemoryRouterProvider>
   ),
   isSnippet: true,
