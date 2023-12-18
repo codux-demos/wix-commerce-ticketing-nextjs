@@ -13,5 +13,13 @@
       "@app/*": "./app/*",
       "next/image": "./_codux/wrappers/FakeImage"
     }
+  },
+   "scripts": {
+    "install": {
+      "title": "Install",
+      "description": "Run install",
+      "command": "yarn",
+      "trigger": ["checkout", "pull", "setup"]
+    }
   }
 }
