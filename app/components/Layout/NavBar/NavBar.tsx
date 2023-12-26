@@ -73,7 +73,7 @@ export function NavBar() {
           <div className="h-[180px] w-[140px] overflow-hidden sm:h-auto sm:w-auto mx-auto">
             <Image
               className="mx-auto z-10"
-              src="https://static.wixstatic.com/media/503ea4_cb7ebc8a601749f098164d92ec7aa441~mv2.jpg/v1/fill/w_480,h_622,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/503ea4_cb7ebc8a601749f098164d92ec7aa441~mv2.jpg"
+              src="/public/images/cover-image.webp"
               width={240}
               height={0}
               alt="Talisa Kidd"
