@@ -17,9 +17,8 @@ export function SiteWrapper(props: {
         <Header />
         <main className="bg-site min-h-[600px]">{props.children}</main>
         <SidebarUI />
-        {/* TODO: there seems to be an issue with the flowbite lib */}
-        {/* <NotPremium /> */}
-        {/* <LoginModal /> */}
+        <NotPremium />
+        <LoginModal />
       </Provider>
       <div className="mt-10 sm:mt-20">
         <Footer />
