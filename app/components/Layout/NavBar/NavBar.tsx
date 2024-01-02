@@ -73,7 +73,7 @@ export function NavBar() {
           <div className="h-[180px] w-[140px] overflow-hidden sm:h-auto sm:w-auto mx-auto">
             <Image
               className="mx-auto z-10"
-              src="/public/images/cover-image.webp"
+              src={'/images/cover-image.webp'}
               width={240}
               height={0}
               alt="Talisa Kidd"

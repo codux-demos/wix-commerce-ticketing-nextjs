@@ -8,18 +8,20 @@
     }
   },
   "resolve": {
-    "alias":{
+    "alias": {
       "@app": "./app",
       "@app/*": "./app/*",
       "next/image": "./_codux/wrappers/FakeImage"
     }
   },
-   "scripts": {
+  "scripts": {
     "install": {
       "title": "Install",
       "description": "Run install",
       "command": "yarn",
       "trigger": ["checkout", "pull", "setup"]
     }
-  }
+  },
+  "svgLoader": "both",
+  "staticServerRoot": "./public"
 }

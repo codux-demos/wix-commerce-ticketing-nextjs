@@ -5,7 +5,6 @@ import { ClientProvider } from '@app/components/Provider/ClientProvider';
 import { SidebarUI } from '@app/components/Sidebar/SidebarUI';
 import { NotPremium } from '@app/components/NotPremium/NotPremium';
 import { LoginModal } from '@app/components/LoginModal/LoginModal';
-import { FakeClientProvider } from './components/Provider/FakeClientProvider';
 
 export function SiteWrapper(props: {
   children: ReactNode;
