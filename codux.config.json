@@ -11,7 +11,7 @@
     "alias": {
       "@app": "./app",
       "@app/*": "./app/*",
-      "next/image": "./_codux/wrappers/FakeImage"
+      "next/image": "./_codux/mocks/FakeImage"
     }
   },
   "scripts": {
